@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Surf Coffee E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap"
+     rel="stylesheet">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+           <a href="index.html"> <img src="images/logo2.jpg" width="100px"></a>
+        </div>
+        <nav>
+            <ul id="menuItems">
+                <li><a href="index.html"">Home</li>
+                <li><a href="products.html">Products</li>
+                <li><a href="#">About</li>
+                <li><a href="#">Contact</li>
+                <li><a href="account.html">Account</li>
+            </ul>
+        </nav>
+        <a href="cart.html"><img src="images/cart.png" width="28px" height="30px"></a>
+        
+        <img src="images/menu.png" class="menu-icon" width="28px" height="28px" onclick="menutoggle()">
+    </div>
+</div> 
+<!--account info here!!-->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/image1.png" >
+            </div>
+            <div class="col-2">
+            <div class="form-container">
+            <div class="form-btn">
+                 <span onclick="login()">Login</span>
+                 <span onclick="registration()">Register</span>
+                 <hr id="indicator">
+            </div>
+            <form id="login">
+                <input type="text" placeholder="Username" >
+                <input type="text" placeholder="Password">
+                <button type="submit" class="btn">
+                 Login
+                </button>
+                <a href="#">Forgot Password</a>
+            </form>
+            <form id="registration">
+                <input type="text" placeholder="Username" >
+                <input type="text" placeholder="Password">
+                <input type="email" placeholder="email">
+                <button type="submit" class="btn">
+                 Register
+                </button>
+            </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!--footer here!-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download app for Android and ios mobile phones.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png">
+                    <img src="images/app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo2.jpg">
+                <p>Our Plan is to sustainably make the pleasure and benefits of sports 
+                    accessible to many pople.
+                </p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Posts</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright&copy; 2020 - Surf Coffee e-commerce</p>
+    </div>
+</div>
+<script>
+    var menuItems=document.getElementById("menuItems");
+    menuItems.style.maxHeight = "0px";
+    function menutoggle()
+    {
+        if (menuItems.style.maxHeight == "0px"){
+            menuItems.style.maxHeight = "200px";
+            
+        }
+        else{
+            menuItems.style.maxHeight = "0px";
+        }
+    }
+</Script>
+<!--For toggle -->
+<script>
+    var loginform= document.getElementById('login');
+    var regform= document.getElementById('registration');
+    var indicator= document.getElementById('indicator');
+
+    function    login(){
+        loginform.style.transform = "translateX(256px)";
+        regform.style.transform= "translateX(256px)";
+        indicator.style.transform = "translateX(0px)";
+    }
+    function registration(){
+        loginform.style.transform = "translateX(0px)";
+        regform.style.transform = "translateX(0px)";
+        indicator.style.transform = "translateX(100px)";
+    }
+
+</script>
+</body>
+</html>
